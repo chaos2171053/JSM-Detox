@@ -5,6 +5,7 @@ import { MenuScreen } from './screens/MenuScreen';
 import { OrdersScreen } from './screens/OrdersScreen';
 import { BuildScreen } from './screens/BuildScreen';
 import { OptionScreen } from './screens/OptionScreen';
+import { DemoScreen } from './screens/DemoScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -28,6 +29,11 @@ export const Navigator = () => (
       name="Orders"
       component={OrdersScreen}
       options={{ tabBarTestID: 'orders-tab' }}
+    />
+    <Tab.Screen
+      name="Demo"
+      component={DemoScreen}
+      options={{ tabBarTestID: 'demo-tab' }}
     />
   </Tab.Navigator>
 );
