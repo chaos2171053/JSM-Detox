@@ -1,26 +1,26 @@
 export default [
   {
     id: 'pepperoni',
-    name: 'Pepperoni',
-    toppings: ['peperroni'],
+    name: '红盒',
+    toppings: ['叉烧'],
     image: 'https://i.ibb.co/DDWFGLX/pepperoni.png',
   },
   {
     id: 'margherita',
-    name: 'Margherita',
-    toppings: ['basil', 'mozzarella'],
+    name: '黄盒',
+    toppings: ['爆炒猪肝', '笋干焖鸭'],
     image: 'https://i.ibb.co/DtVP43f/margherita.png',
   },
   {
     id: 'supreme',
-    name: 'Supreme',
-    toppings: ['peperroni', 'sausage', 'bell peppers', 'onions', 'olives'],
+    name: '黑盒',
+    toppings: ['葱油鸡', '青瓜炒肉',],
     image: 'https://i.ibb.co/0yVfb1W/supreme.png',
   },
   {
     id: 'meat_lovers',
-    name: 'Meat Lovers',
-    toppings: ['bacon', 'ham', 'pepperoni', 'sausage'],
+    name: '紫盒',
+    toppings: ['蒜蓉蒸草虾','帝王蟹'],
     image: 'https://i.ibb.co/m8r8ZgP/meat-lovers.png',
   },
 ];

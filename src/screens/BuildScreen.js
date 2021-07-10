@@ -17,7 +17,7 @@ import { useOrders } from '../context/orders';
 const removeItem = (list, item) => list.filter(x => x !== item);
 
 export const BuildScreen = ({ navigation }) => {
-  const [size, setSize] = React.useState('medium');
+  const [size, setSize] = React.useState('中');
   const [availableToppings, setAvailableToppings] = React.useState(toppings);
   const [selectedToppings, setSelectedToppings] = React.useState([]);
   const { dispatch } = useOrders();
@@ -37,7 +37,7 @@ export const BuildScreen = ({ navigation }) => {
     <SafeAreaView>
       <BannerImage url="https://pbs.twimg.com/profile_banners/1093412383/1619207896/1500x500" />
       <View style={styles.section}>
-        <Text style={styles.heading}>Available toppings:</Text>
+        <Text style={styles.heading}>可选菜:</Text>
         <View style={styles.row} testID="available-toppings">
           {availableToppings.map((topping, idx) => (
             <TouchableOpacity
@@ -51,7 +51,7 @@ export const BuildScreen = ({ navigation }) => {
         </View>
       </View>
       <View style={styles.section}>
-        <Text style={styles.heading}>Selected Toppings</Text>
+        <Text style={styles.heading}>已选菜</Text>
         <View style={styles.row} testID="selected-toppings">
           {selectedToppings.map((topping, idx) => (
             <TouchableOpacity
@@ -69,16 +69,16 @@ export const BuildScreen = ({ navigation }) => {
       </View>
       <View style={StyleSheet.flatten([styles.section, styles.row])}>
         <Text style={StyleSheet.flatten([styles.heading, styles.bigText])}>
-          Total:{' '}
+          总价:{' '}
         </Text>
         <Text style={styles.bigText} testID="total">
-          ${price}
+        ¥{price}
         </Text>
       </View>
       <View style={styles.section}>
         <Button
           buttonStyles={styles.orderButton}
-          text="Submit Order"
+          text="提交订单"
           testID="submit-order"
           onPress={() => {
             dispatch({

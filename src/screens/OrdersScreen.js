@@ -10,19 +10,19 @@ export const OrdersScreen = () => {
 
   return (
     <SafeAreaView style={styles.screen}>
-      <Text style={styles.header}>Orders</Text>
+      <Text style={styles.header}>订单</Text>
       <ScrollView>
         <View testID="orders-list">
           {orders.map(order => (
             <View key={order.id} style={styles.order} testID="order-item">
               <View>
-                <Text style={styles.dateText}>Ordered: {order.date}</Text>
+                <Text style={styles.dateText}>订单日期: {order.date}</Text>
               </View>
               <MenuItem item={order.item}>
                 <View style={StyleSheet.flatten([styles.row, styles.space])}>
-                  <Text style={styles.orderInfo}>Size: {order.size}</Text>
-                  <Text style={styles.orderInfo}>Total: {order.total}</Text>
-                  <Text style={styles.orderInfo}>Status: {order.status}</Text>
+                  <Text style={styles.orderInfo}>分量: {order.size}</Text>
+                  <Text style={styles.orderInfo}>总价: {order.total}</Text>
+                  <Text style={styles.orderInfo}>订单状体: {order.status}</Text>
                 </View>
               </MenuItem>
             </View>

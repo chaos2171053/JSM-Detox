@@ -28,9 +28,9 @@ function OrdersProvider({ children }) {
     orders: [
       {
         id: generateId(),
-        status: 'delivered',
+        status: '已派送',
         total: '$20.00',
-        size: 'medium',
+        size: '中',
         date: createDate(),
         item: menu[0],
       },

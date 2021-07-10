@@ -10,11 +10,11 @@ export const MenuItem = ({ item, handlePress, children, testID }) => (
       </View>
       <View style={styles.contentContainer}>
         <Text style={styles.title}>{item.name}</Text>
-        <Text>Toppings: {item.toppings.join(', ')}</Text>
+        <Text>菜: {item.toppings.join(', ')}</Text>
       </View>
     </View>
     {children}
-    {handlePress && <Button text="Order" onPress={handlePress} />}
+    {handlePress && <Button text="下单" onPress={handlePress} />}
   </View>
 );
 

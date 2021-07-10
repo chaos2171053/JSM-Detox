@@ -8,7 +8,7 @@ import { useOrders } from '../context/orders';
 
 export const OptionScreen = ({ navigation, route }) => {
   const { item } = route.params;
-  const [size, setSize] = React.useState('medium');
+  const [size, setSize] = React.useState('中');
   const { dispatch } = useOrders();
   const price = calculatePrice(size, item.toppings);
   return (
@@ -20,7 +20,7 @@ export const OptionScreen = ({ navigation, route }) => {
             {item.type}
           </Text>
           <View style={styles.section}>
-            <Text style={styles.heading}>Toppings: </Text>
+            <Text style={styles.heading}>菜: </Text>
             <Text style={styles.uppercase}>{item.toppings.join(', ')}</Text>
           </View>
         </View>
@@ -29,16 +29,16 @@ export const OptionScreen = ({ navigation, route }) => {
         </View>
         <View style={StyleSheet.flatten([styles.section, styles.row])}>
           <Text style={StyleSheet.flatten([styles.heading, styles.bigText])}>
-            Total:{' '}
+            总价:{' '}
           </Text>
           <Text testID="total" style={styles.bigText}>
-            ${price}
+          ¥{price}
           </Text>
         </View>
         <View style={styles.section}>
           <Button
             buttonStyles={styles.orderButton}
-            text="Submit Order"
+            text="提交订单"
             testID="order-button"
             onPress={() => {
               dispatch({ type: 'add', item, size, price: `$${price}` });

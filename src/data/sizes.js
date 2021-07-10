@@ -1,1 +1,1 @@
-export default ['small', 'medium', 'large'];
+export default ['小', '中', '大'];
