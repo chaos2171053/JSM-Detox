@@ -29,9 +29,9 @@ export const OptionScreen = ({ navigation, route }) => {
         </View>
         <View style={StyleSheet.flatten([styles.section, styles.row])}>
           <Text style={StyleSheet.flatten([styles.heading, styles.bigText])}>
-            总价:{' '}
+            总价:
           </Text>
-          <Text testID="total" style={styles.bigText}>
+          <Text testID="total-price" style={styles.bigText}>
           ¥{price}
           </Text>
         </View>

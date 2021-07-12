@@ -22,7 +22,7 @@ export const OrdersScreen = () => {
                 <View style={StyleSheet.flatten([styles.row, styles.space])}>
                   <Text style={styles.orderInfo}>分量: {order.size}</Text>
                   <Text style={styles.orderInfo}>总价: {order.total}</Text>
-                  <Text style={styles.orderInfo}>订单状体: {order.status}</Text>
+                  <Text style={styles.orderInfo}>订单状态: {order.status}</Text>
                 </View>
               </MenuItem>
             </View>

@@ -11,7 +11,7 @@ function ordersReducer(state, action) {
       state.orders.unshift({
         id: generateId(),
         item: action.item,
-        status: 'pending',
+        status: '准备中',
         total: action.price,
         size: action.size,
         date: createDate(),
