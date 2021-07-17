@@ -19,14 +19,16 @@ export const MenuScreen = ({ navigation }) => {
           buttonStyles={{ padding: 16 }}
           onPress={() => navigation.navigate('Build')}
         />
-        {menuData.map(item => (
-          <MenuItem
-            key={item.id}
-            testID={item.id}
-            item={item}
-            handlePress={handlePress(item)}
-          />
-        ))}
+        {menuData.map(item => {
+          return (
+            <MenuItem
+              key={item.id}
+              testID={item.id}
+              item={item}
+              handlePress={handlePress(item)}
+            />
+          );
+        })}
       </ScrollView>
     </SafeAreaView>
   );

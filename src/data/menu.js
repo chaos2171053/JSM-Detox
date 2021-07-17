@@ -14,13 +14,13 @@ export default [
   {
     id: 'blackBox',
     name: '黑盒',
-    toppings: ['葱油鸡', '青瓜炒肉',],
+    toppings: ['葱油鸡', '青瓜炒肉'],
     image: 'https://i.ibb.co/0yVfb1W/supreme.png',
   },
   {
     id: 'purpleBox',
     name: '紫盒',
-    toppings: ['蒜蓉蒸草虾','帝王蟹'],
+    toppings: ['蒜蓉蒸草虾', '帝王蟹'],
     image: 'https://i.ibb.co/m8r8ZgP/meat-lovers.png',
   },
 ];
