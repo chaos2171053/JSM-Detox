@@ -14,7 +14,7 @@ describe('App', () => {
     await device.reloadReactNative();
   });
 
-  it('可以在 Menu 和 Orders tab 之间切换', async () => {
+  it('可以在 Menu tab 和 Orders tab 之间切换', async () => {
     await expect(element(by.id('menu-screen'))).toExist();
     await element(by.id('orders-tab')).tap();
     await expect(element(by.id('orders-list'))).toBeVisible();
@@ -29,7 +29,7 @@ describe('App', () => {
     ).toBeVisible();
   });
 
-  it('购买紫盒', async () => {
+  it('购买高贵的紫盒', async () => {
     // await element(by.text('下单').withAncestor(by.id('purpleBox'))).tap();
     await element(by.id('item-purpleBox')).tap();
     await element(by.text('大')).tap();

@@ -4,7 +4,7 @@ import { SafeAreaView, ScrollView, Text, View, StyleSheet } from 'react-native';
 import { Button } from '../components/Button';
 
 export const DemoScreen = () => {
-  const [answer, setAnswer] = useState(undefined);
+  const [answer, setAnswer] = useState('');
 
   return (
     <SafeAreaView testID="demo-screen">
@@ -32,8 +32,9 @@ export const DemoScreen = () => {
           />
           <Button
             text="重置"
+            testID="resetBtn"
             buttonStyles={styles.btn}
-            onPress={() => setAnswer(undefined)}
+            onPress={() => setAnswer('')}
           />
         </View>
       </ScrollView>
