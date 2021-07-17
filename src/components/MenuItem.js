@@ -14,7 +14,9 @@ export const MenuItem = ({ item, handlePress, children, testID }) => (
       </View>
     </View>
     {children}
-    {handlePress && <Button text="下单" onPress={handlePress} />}
+    {handlePress && (
+      <Button text="下单" onPress={handlePress} testID={`order-${testID}`} />
+    )}
   </View>
 );
 

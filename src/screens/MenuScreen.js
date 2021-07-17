@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import { SafeAreaView, ScrollView } from 'react-native';
+import { SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
 import { MenuItem } from '../components/MenuItem';
 import { Button } from '../components/Button';
 import { BannerImage } from '../components/BannerImage';
@@ -21,12 +21,19 @@ export const MenuScreen = ({ navigation }) => {
         />
         {menuData.map(item => {
           return (
-            <MenuItem
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate('OptionScreen', { item });
+              }}
               key={item.id}
-              testID={item.id}
-              item={item}
-              handlePress={handlePress(item)}
-            />
+              testID={`item-${item.id}`}>
+              <MenuItem
+                key={item.id}
+                testID={item.id}
+                item={item}
+                handlePress={handlePress(item)}
+              />
+            </TouchableOpacity>
           );
         })}
       </ScrollView>

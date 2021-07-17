@@ -31,7 +31,7 @@ export const OptionScreen = ({ navigation, route }) => {
           <Text style={StyleSheet.flatten([styles.heading, styles.bigText])}>
             总价:
           </Text>
-          <Text testID="total-price" style={styles.bigText}>
+          <Text testID="order-price" style={styles.bigText}>
           ¥{price}
           </Text>
         </View>
@@ -39,7 +39,7 @@ export const OptionScreen = ({ navigation, route }) => {
           <Button
             buttonStyles={styles.orderButton}
             text="提交订单"
-            testID="order-button"
+            testID="submit-order-button"
             onPress={() => {
               dispatch({ type: 'add', item, size, price: `$${price}` });
               navigation.navigate('Orders');
